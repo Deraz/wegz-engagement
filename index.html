@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Youssef &amp; Ganna — Engagement</title>
+  <meta name="description" content="Youssef & Ganna are getting engaged! 24 · 09 · 2026" />
+  <meta property="og:title" content="Youssef &amp; Ganna — Engagement" />
+  <meta property="og:description" content="You're invited to celebrate our engagement! · ندعوكم لحفل خطوبتنا" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#fff7ec" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Shadows+Into+Light&family=Quicksand:wght@400;500;600;700&family=Aref+Ruqaa:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ===== PRELOADER: sealed envelope that opens ===== -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-bg"></div>
+
+    <div class="envelope-zone pop-in">
+      <div class="envelope" aria-hidden="true">
+        <div class="env-back"></div>
+        <div class="env-letter" id="env-letter">
+          <p class="hand letter-line-sm">You're invited to celebrate</p>
+          <p class="hand letter-line-lg">Youssef &amp; Ganna</p>
+          <p class="ar letter-line-ar">حفل خطوبة</p>
+        </div>
+        <div class="env-pocket"></div>
+        <div class="env-flap" id="env-flap">
+          <svg viewBox="0 0 380 160">
+            <polygon points="0,0 380,0 190,150" />
+          </svg>
+        </div>
+        <div class="env-seal" id="env-seal">
+          <svg viewBox="0 0 32 30">
+            <path d="M16 27S3 18.5 3 10.5C3 6 6.5 3 10 3c2.5 0 4.5 1.5 6 4 1.5-2.5 3.5-4 6-4 3.5 0 7 3 7 7.5C29 18.5 16 27 16 27z" />
+          </svg>
+        </div>
+      </div>
+      <div class="load-dots"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+
+  <!-- ===== FLOATING HEARTS BACKGROUND ===== -->
+  <div class="sky" id="sky" aria-hidden="true"></div>
+
+  <main class="page">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero pop-in">
+      <p class="scribble eyebrow">✶ You're invited ✶</p>
+      <p class="ar eyebrow-ar">ندعوكم لحفل خطوبتنا</p>
+
+      <h1 class="hand couple">
+        Youssef
+        <span class="amp scribble">&amp;</span>
+        Ganna
+      </h1>
+      <p class="ar couple-ar">يوسف و جنة</p>
+
+      <div class="hero-photo">
+        <div class="taped">
+          <figure class="card polaroid tilt-l2">
+            <img src="assets/Hero.svg" alt="Youssef and Ganna" class="polaroid-img" />
+            <figcaption class="hand polaroid-caption">Getting engaged! ♥</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="date-pill-zone">
+        <div class="card date-pill tilt-l1">
+          <p class="hand date-pill-text" id="hero-date">September 24, 2026</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STORY ===== -->
+    <section class="centered">
+      <h2 class="hand section-title">Guess what?<span class="ar title-ar">خبر سعيد!</span></h2>
+      <div class="card pad-lg tilt-r0">
+        <p class="scribble story-line">
+          Time flew by so fast — Youssef &amp; Ganna are getting engaged! 💍✨
+        </p>
+        <p class="ar story-line-ar">وفرحتنا مش هتكمل من غيركم ♥</p>
+      </div>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section>
+      <h2 class="hand section-title">A few favorites<span class="ar title-ar">شوية لحظات حلوة</span></h2>
+      <div class="photo-grid">
+        <div class="card clip tilt-l2"><img src="assets/Photo1.svg" alt="Memory 1" loading="lazy" /></div>
+        <div class="card clip tilt-r2"><img src="assets/Photo2.svg" alt="Memory 2" loading="lazy" /></div>
+        <div class="card clip tilt-l2"><img src="assets/Photo3.svg" alt="Memory 3" loading="lazy" /></div>
+        <div class="card clip tilt-r2"><img src="assets/Photo4.svg" alt="Memory 4" loading="lazy" /></div>
+      </div>
+    </section>
+
+    <!-- ===== INVITATION ===== -->
+    <section class="centered">
+      <div class="card pad-lg tilt-l1">
+        <p class="hand invite-line">We would love for you to be part of our special day!</p>
+        <p class="invite-sub">Join us as we say yes to forever 💍</p>
+        <p class="ar invite-sub-ar">يشرفنا حضوركم معانا في يومنا المميز</p>
+      </div>
+    </section>
+
+    <!-- ===== CALENDAR ===== -->
+    <section>
+      <h2 class="hand section-title">Save the date<span class="ar title-ar">احفظوا التاريخ</span></h2>
+      <div class="card month" id="month"></div>
+    </section>
+
+    <!-- ===== WHERE ===== -->
+    <section>
+      <h2 class="hand section-title">Where?<span class="ar title-ar">فين؟</span></h2>
+      <div class="card clip tilt-r1">
+        <img src="assets/Venue.svg" alt="Loreal Hall - Al Galaa Club" class="venue-img" loading="lazy" />
+        <div class="venue-body">
+          <p class="hand venue-title" id="venue-name">Loreal Hall - Al Galaa Club</p>
+          <p class="ar venue-title-ar" id="venue-name-ar">قاعة لوريال - نادي الجلاء</p>
+          <p class="venue-sub" id="venue-address"></p>
+          <a class="btn pill" id="maps-link" href="#" target="_blank" rel="noreferrer">Open Location ♥</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHEN ===== -->
+    <section class="centered">
+      <h2 class="hand section-title">When?<span class="ar title-ar">امتى؟</span></h2>
+      <div class="card pad-lg tilt-l1 when-card">
+        <p class="scribble when-dow" id="when-dow">Thursday</p>
+        <p class="hand when-date" id="when-date">September 24, 2026</p>
+        <p class="when-time" id="when-time">From 7:00 PM till 11:00 PM</p>
+        <p class="ar when-time-ar">من ٧ مساءً لحد ١١ مساءً</p>
+      </div>
+    </section>
+
+    <!-- ===== COUNTDOWN ===== -->
+    <section class="centered">
+      <h2 class="hand section-title">Time Left Until We Meet!<span class="ar title-ar">العد التنازلي</span></h2>
+      <div class="ticker" id="ticker"></div>
+    </section>
+
+    <!-- ===== MESSAGE / RSVP ===== -->
+    <section>
+      <h2 class="hand section-title">Leave Us a Message 💌<span class="ar title-ar">سيبولنا رسالة</span></h2>
+      <form id="note-form" class="card pad-md note-form tilt-r0">
+        <input id="note-name" type="text" placeholder="Your Name · اسمك" class="scribble field" />
+        <textarea id="note-text" rows="4" class="scribble field"
+          placeholder='Will you be joining us? Leave a "Yes" or "No" with your sweet note...'></textarea>
+        <button type="submit" class="btn wide">Send with love</button>
+      </form>
+    </section>
+
+    <!-- ===== FINAL ===== -->
+    <section class="centered">
+      <h2 class="hand final-line">We can't wait to celebrate with you!</h2>
+      <p class="ar final-line-ar">مستنيينكم ♥</p>
+      <div class="photo-grid duo">
+        <div class="card clip tilt-l3"><img src="assets/Final1.svg" alt="Youssef" loading="lazy" /></div>
+        <div class="card clip tilt-r3"><img src="assets/Final2.svg" alt="Ganna" loading="lazy" /></div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="centered footer">
+      <p class="hand footer-couple">Youssef &amp; Ganna</p>
+      <p class="ar footer-couple-ar">يوسف و جنة</p>
+      <p class="scribble footer-date" id="footer-date">24 · 09 · 2026</p>
+    </footer>
+  </main>
+
+  <!-- ===== TOAST ===== -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- ===== MUSIC ===== -->
+  <!-- Drop your real song at assets/Music.mp3 and it wins automatically;
+       assets/Music.wav is a generated placeholder tune. -->
+  <audio id="tune" loop preload="auto" playsinline>
+    <source src="assets/Music.mp3" type="audio/mpeg" />
+    <source src="assets/Music.wav" type="audio/wav" />
+  </audio>
+
+  <button id="tune-toggle" class="tune-btn" aria-label="Toggle Music">
+    <span class="tune-icon">
+      <svg class="ico-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+      <svg class="ico-pause" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" /></svg>
+    </span>
+    <span class="tune-waves"><i></i><i></i><i></i></span>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
