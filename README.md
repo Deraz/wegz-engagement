@@ -30,11 +30,23 @@ filenames with the `.svg` extension replaced — just match what the HTML says).
 automatically over the placeholder tune (`assets/Music.wav`, a generated
 sound; delete it once the real song is in).
 
+## Wishes → Google Sheet (V2)
+
+The message form saves wishes to a Google Sheet once wired up:
+
+1. From Youssef's Google account, create a new Sheet (sheets.new).
+2. Extensions → Apps Script → paste `apps-script/Code.gs` → save.
+3. Deploy → New deployment → Web app → Execute as **Me**, access **Anyone**
+   → Deploy, authorize, copy the URL ending in `/exec`.
+4. Paste that URL into `INVITE.wishesUrl` at the top of `script.js`, push.
+
+Until `wishesUrl` is set, the form only `console.log`s the submission.
+Each wish lands as a row (When, Name, Message) in a "Wishes" tab —
+the Sheet is the admin view for now.
+
 ## V2 backlog
 
-- Send form messages to a Google Sheet (Google Apps Script endpoint under
-  Youssef's Gmail) — the form currently `console.log`s the submission.
-- Small admin panel to read the messages.
+- Small admin panel to browse the wishes (the Sheet covers this meanwhile).
 
 ## Folder notes
 

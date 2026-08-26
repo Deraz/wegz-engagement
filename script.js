@@ -12,6 +12,11 @@ const INVITE = {
   venueAr: "قاعة لوريال - نادي الجلاء",
   address: "",                    // optional area/city, e.g. "New Cairo" (hidden when empty)
   mapsUrl: "https://maps.app.goo.gl/s44aGuM3sf1ryt758",
+
+  // V2: Google Apps Script web-app URL (ends in /exec) that appends wishes
+  // to a Google Sheet — see apps-script/Code.gs for the 3-minute setup.
+  // Leave "" and the form just logs to the console.
+  wishesUrl: "",
 };
 
 const start = new Date(INVITE.start);
@@ -129,18 +134,35 @@ function showToast(message) {
 }
 
 /* ---------- Message form ----------
-   V1: log to console only.
-   V2 (planned): POST to a Google Apps Script endpoint that appends
-   to a Google Sheet on Youssef's account + a small admin panel. */
+   Wishes go to a Google Sheet when INVITE.wishesUrl is set
+   (Apps Script web app — see apps-script/Code.gs). Until then,
+   submissions only log to the console. */
 (function () {
   const form = document.getElementById("note-form");
+  const button = form.querySelector("button[type=submit]");
+
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const name = document.getElementById("note-name").value.trim();
     const message = document.getElementById("note-text").value.trim();
     if (!message) return;
 
-    console.log("RSVP message:", { name, message, at: new Date().toISOString() });
+    const wish = { name, message, at: new Date().toISOString() };
+    console.log("RSVP message:", wish);
+
+    if (INVITE.wishesUrl) {
+      // no-cors + text/plain keeps this a "simple request" so the browser
+      // sends it without a preflight (Apps Script doesn't answer preflights).
+      // The response is opaque, so we toast optimistically.
+      button.disabled = true;
+      fetch(INVITE.wishesUrl, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify(wish),
+      }).catch((err) => console.error("Wish delivery failed:", err))
+        .finally(() => { button.disabled = false; });
+    }
 
     showToast("Thank you for the sweet words! 💕");
     form.reset();
