@@ -16,7 +16,7 @@ const INVITE = {
   // V2: Google Apps Script web-app URL (ends in /exec) that appends wishes
   // to a Google Sheet — see apps-script/Code.gs for the 3-minute setup.
   // Leave "" and the form just logs to the console.
-  wishesUrl: "",
+  wishesUrl: "https://script.google.com/macros/s/AKfycbx-yPIVaJyXrlGbcSzlg6k-VbQdBtaR2WUkJ917wE0NmGGb_XsO1jX2hjNb_I2Vg7CC/exec",
 };
 
 const start = new Date(INVITE.start);
