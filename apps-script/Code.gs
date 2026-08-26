@@ -11,7 +11,29 @@
  *  4. Put that URL into INVITE.wishesUrl in script.js on the site.
  *
  * Each submission appends a row: [When, Name, Message] to a "Wishes" tab.
+ *
+ * The admin panel (admin.html) reads wishes back via GET with ?key=...
+ * Set your own secret below before deploying — anyone who has this key
+ * can read the wishes. After editing, redeploy: Deploy → Manage
+ * deployments → ✏️ edit → Version: "New version" → Deploy (URL stays the same).
  */
+
+var ADMIN_KEY = "CHANGE-ME"; // ← set a long random secret, then redeploy
+
+function doGet(e) {
+  var key = (e && e.parameter && e.parameter.key) || "";
+  if (!key || key !== ADMIN_KEY) return respond({ ok: false, error: "unauthorized" });
+
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheetByName("Wishes");
+  if (!sheet || sheet.getLastRow() < 2) return respond({ ok: true, wishes: [] });
+
+  var rows = sheet.getRange(2, 1, sheet.getLastRow() - 1, 3).getValues();
+  var wishes = rows.map(function (r) {
+    return { at: r[0], name: String(r[1]), message: String(r[2]) };
+  }).reverse(); // newest first
+  return respond({ ok: true, wishes: wishes });
+}
 
 function doPost(e) {
   var lock = LockService.getScriptLock();

@@ -41,12 +41,22 @@ The message form saves wishes to a Google Sheet once wired up:
 4. Paste that URL into `INVITE.wishesUrl` at the top of `script.js`, push.
 
 Until `wishesUrl` is set, the form only `console.log`s the submission.
-Each wish lands as a row (When, Name, Message) in a "Wishes" tab —
-the Sheet is the admin view for now.
+Each wish lands as a row (When, Name, Message) in a "Wishes" tab.
+
+## Admin panel
+
+`admin.html` (live at `/admin.html`) shows the wishes in the same theme.
+It's gated by a secret key checked by the Apps Script:
+
+1. In the Apps Script editor, set `ADMIN_KEY` in `Code.gs` to a long random
+   secret (never commit the real one — the repo copy stays `"CHANGE-ME"`).
+2. Redeploy: Deploy → Manage deployments → ✏️ → Version "New version" →
+   Deploy (the /exec URL stays the same).
+3. Open the admin page, paste the key once — it's remembered in that browser.
 
 ## V2 backlog
 
-- Small admin panel to browse the wishes (the Sheet covers this meanwhile).
+(done — wishes → Google Sheet, admin panel, Open Graph tags)
 
 ## Folder notes
 

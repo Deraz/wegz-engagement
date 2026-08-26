@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Open Graph cover generator: render at exactly 1200x630 and screenshot.
+     Regenerate after the real hero photo arrives:
+       msedge --headless --disable-gpu --force-device-scale-factor=1 --hide-scrollbars \
+         --window-size=1200,630 --virtual-time-budget=8000 \
+         --screenshot=assets/og-cover.png tools/og-cover.html
+     To feature the photo, un-hide the .photo block and point it at the asset. -->
+
+<head>
+  <meta charset="UTF-8" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Shadows+Into+Light&family=Quicksand:wght@500;600&family=Aref+Ruqaa:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background: #fff7ec;
+      background-image:
+        radial-gradient(circle at 12% 8%, rgba(226, 92, 92, 0.08), transparent 40%),
+        radial-gradient(circle at 88% 82%, rgba(226, 92, 92, 0.07), transparent 45%);
+      font-family: 'Quicksand', sans-serif;
+      color: #7a1a1f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .frame {
+      width: 1120px;
+      height: 550px;
+      border: 3px dashed #e25c5c;
+      border-radius: 28px;
+      background: #fff7ec;
+      box-shadow: 0 18px 50px -20px rgba(122, 26, 31, 0.35);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      transform: rotate(-0.6deg);
+    }
+    .eyebrow {
+      font-family: 'Shadows Into Light', cursive;
+      font-size: 30px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(122, 26, 31, 0.7);
+    }
+    .eyebrow-ar { font-family: 'Aref Ruqaa', serif; font-size: 30px; color: #e25c5c; margin-top: 2px; }
+    .names {
+      font-family: 'Caveat', cursive;
+      font-weight: 700;
+      font-size: 120px;
+      line-height: 1.02;
+      color: #c1272d;
+      margin: 10px 0 2px;
+    }
+    .names .amp { font-family: 'Shadows Into Light', cursive; font-size: 64px; color: #e25c5c; margin: 0 18px; }
+    .names-ar { font-family: 'Aref Ruqaa', serif; font-size: 40px; color: rgba(122, 26, 31, 0.85); }
+    .divider { display: flex; gap: 10px; margin: 26px 0; }
+    .divider i { width: 10px; height: 10px; border-radius: 50%; background: rgba(226, 92, 92, 0.55); }
+    .when { font-family: 'Caveat', cursive; font-size: 46px; color: #c1272d; }
+    .where { font-size: 24px; font-weight: 600; color: rgba(122, 26, 31, 0.8); margin-top: 6px; }
+    .heart {
+      position: absolute;
+      fill: #e25c5c;
+      opacity: 0.5;
+    }
+    .tape {
+      position: absolute;
+      top: -16px;
+      left: 50%;
+      transform: translateX(-50%) rotate(-3deg);
+      width: 150px;
+      height: 34px;
+      background: rgba(226, 92, 92, 0.35);
+      border-radius: 3px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="frame">
+    <div class="tape"></div>
+    <svg class="heart" style="width:56px;left:70px;top:60px;transform:rotate(-14deg)" viewBox="0 0 32 30"><path d="M16 27S3 18.5 3 10.5C3 6 6.5 3 10 3c2.5 0 4.5 1.5 6 4 1.5-2.5 3.5-4 6-4 3.5 0 7 3 7 7.5C29 18.5 16 27 16 27z"/></svg>
+    <svg class="heart" style="width:40px;right:100px;top:120px;transform:rotate(12deg)" viewBox="0 0 32 30"><path d="M16 27S3 18.5 3 10.5C3 6 6.5 3 10 3c2.5 0 4.5 1.5 6 4 1.5-2.5 3.5-4 6-4 3.5 0 7 3 7 7.5C29 18.5 16 27 16 27z"/></svg>
+    <svg class="heart" style="width:34px;left:150px;bottom:80px;transform:rotate(8deg)" viewBox="0 0 32 30"><path d="M16 27S3 18.5 3 10.5C3 6 6.5 3 10 3c2.5 0 4.5 1.5 6 4 1.5-2.5 3.5-4 6-4 3.5 0 7 3 7 7.5C29 18.5 16 27 16 27z"/></svg>
+    <svg class="heart" style="width:64px;right:70px;bottom:60px;transform:rotate(-9deg)" viewBox="0 0 32 30"><path d="M16 27S3 18.5 3 10.5C3 6 6.5 3 10 3c2.5 0 4.5 1.5 6 4 1.5-2.5 3.5-4 6-4 3.5 0 7 3 7 7.5C29 18.5 16 27 16 27z"/></svg>
+
+    <div class="eyebrow">✶ You're invited ✶</div>
+    <div class="eyebrow-ar">ندعوكم لحفل خطوبتنا</div>
+    <div class="names">Youssef <span class="amp">&amp;</span> Ganna</div>
+    <div class="names-ar">يوسف و جنة</div>
+    <div class="divider"><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="when">Thursday, September 24, 2026 · 7:00 PM</div>
+    <div class="where">Loreal Hall - Al Galaa Club · قاعة لوريال - نادي الجلاء</div>
+  </div>
+</body>
+
+</html>
