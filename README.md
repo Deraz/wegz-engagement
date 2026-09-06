@@ -26,9 +26,9 @@ date/time, venue, maps link. Names and the bilingual copy are in `index.html`.
 Use `.webp` or `.jpg` and update the `src` in `index.html` (or keep the same
 filenames with the `.svg` extension replaced — just match what the HTML says).
 
-**Music:** drop your song at `assets/Music.mp3` — the page prefers it
-automatically over the placeholder tune (`assets/Music.wav`, a generated
-sound; delete it once the real song is in).
+**Music:** `assets/Music.wav` is the final soundtrack (an original generated
+tune — Youssef approved it). It's the audio element's only source; if it's
+ever replaced, keep the same filename or update the `src` in `index.html`.
 
 ## Wishes → Google Sheet (V2)
 

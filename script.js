@@ -184,17 +184,22 @@ function showToast(message) {
     pauseIcon.style.display = isPlaying ? "block" : "none";
   }
 
-  function tryPlay() {
+  function tryPlay(loud) {
     if (!music.paused) return;
     const p = music.play();
-    if (p) p.then(() => { setPlaying(true); removeGestureListeners(); }).catch(() => {
-      /* autoplay blocked — keep waiting for a real tap */
+    if (p) p.then(() => { setPlaying(true); removeGestureListeners(); }).catch((err) => {
+      console.warn("Music play failed:", err.name, err.message);
+      // autoplay blocks are expected on page load; only surface real
+      // failures the guest asked for by tapping the button
+      if (loud && err.name !== "NotAllowedError") {
+        showToast("Music couldn't start (" + err.name + ") 🎵");
+      }
     });
   }
 
   btn.addEventListener("click", (e) => {
     e.stopPropagation();
-    if (music.paused) tryPlay();
+    if (music.paused) tryPlay(true);
     else { music.pause(); setPlaying(false); }
   });
 
