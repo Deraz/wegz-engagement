@@ -145,12 +145,12 @@ img { max-width: 100%; display: block; }
 .polaroid { padding: 12px; max-width: 360px; width: 100%; margin: 0; }
 .polaroid-img {
   width: 100%;
-  height: 288px;
+  aspect-ratio: 4 / 5;
+  height: auto;
   object-fit: cover;
   border-radius: 0.5rem;
   background: var(--paper-warm);
 }
-@media (min-width: 768px) { .polaroid-img { height: 384px; } }
 .polaroid-caption { font-size: 28px; color: var(--ink); margin: 12px 0 4px; }
 
 /* washi tape strip on the hero polaroid */
@@ -185,10 +185,9 @@ img { max-width: 100%; display: block; }
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
 }
-.photo-grid img { width: 100%; height: 176px; object-fit: cover; }
+.photo-grid img { width: 100%; aspect-ratio: 1; height: auto; object-fit: cover; }
 @media (min-width: 768px) {
   .photo-grid { gap: 20px; }
-  .photo-grid img { height: 208px; }
 }
 .duo { margin-top: 32px; }
 .duo img { width: 100%; aspect-ratio: 4 / 5; height: auto; object-fit: cover; }
@@ -236,8 +235,7 @@ img { max-width: 100%; display: block; }
 .month-day.the-day span { position: relative; z-index: 1; }
 
 /* ---------- Venue ---------- */
-.venue-img { width: 100%; height: 224px; object-fit: cover; }
-@media (min-width: 768px) { .venue-img { height: 288px; } }
+.venue-img { width: 100%; aspect-ratio: 1280 / 783; height: auto; object-fit: cover; }
 .venue-body { padding: 24px; text-align: center; }
 .venue-title { font-size: 32px; color: var(--ink); margin: 0; }
 .venue-title-ar { font-size: 22px; color: var(--ink-soft); margin: 2px 0 0; }
