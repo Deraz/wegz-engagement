@@ -36,35 +36,60 @@
       background: #fff7ec;
       box-shadow: 0 18px 50px -20px rgba(122, 26, 31, 0.35);
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
+      gap: 48px;
       text-align: center;
       position: relative;
       transform: rotate(-0.6deg);
+      padding: 0 56px;
     }
+    .polaroid {
+      flex: none;
+      background: #fff;
+      border: 2px solid #c1272d;
+      border-radius: 10px;
+      padding: 12px 12px 8px;
+      transform: rotate(-3deg);
+      box-shadow: 0 12px 28px -10px rgba(122, 26, 31, 0.4);
+      position: relative;
+    }
+    .polaroid img { width: 300px; height: 375px; object-fit: cover; border-radius: 6px; display: block; }
+    .polaroid .cap { font-family: 'Caveat', cursive; font-size: 30px; color: #c1272d; margin-top: 4px; }
+    .polaroid .ptape {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%) rotate(-4deg);
+      width: 110px;
+      height: 26px;
+      background: rgba(226, 92, 92, 0.35);
+      border-radius: 3px;
+    }
+    .stack { display: flex; flex-direction: column; align-items: center; }
     .eyebrow {
       font-family: 'Shadows Into Light', cursive;
-      font-size: 30px;
+      font-size: 26px;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: rgba(122, 26, 31, 0.7);
     }
-    .eyebrow-ar { font-family: 'Aref Ruqaa', serif; font-size: 30px; color: #e25c5c; margin-top: 2px; }
+    .eyebrow-ar { font-family: 'Aref Ruqaa', serif; font-size: 26px; color: #e25c5c; margin-top: 2px; }
     .names {
       font-family: 'Caveat', cursive;
       font-weight: 700;
-      font-size: 120px;
+      font-size: 84px;
       line-height: 1.02;
       color: #c1272d;
-      margin: 10px 0 2px;
+      margin: 8px 0 2px;
+      white-space: nowrap;
     }
-    .names .amp { font-family: 'Shadows Into Light', cursive; font-size: 64px; color: #e25c5c; margin: 0 18px; }
-    .names-ar { font-family: 'Aref Ruqaa', serif; font-size: 40px; color: rgba(122, 26, 31, 0.85); }
-    .divider { display: flex; gap: 10px; margin: 26px 0; }
-    .divider i { width: 10px; height: 10px; border-radius: 50%; background: rgba(226, 92, 92, 0.55); }
-    .when { font-family: 'Caveat', cursive; font-size: 46px; color: #c1272d; }
-    .where { font-size: 24px; font-weight: 600; color: rgba(122, 26, 31, 0.8); margin-top: 6px; }
+    .names .amp { font-family: 'Shadows Into Light', cursive; font-size: 46px; color: #e25c5c; margin: 0 12px; }
+    .names-ar { font-family: 'Aref Ruqaa', serif; font-size: 34px; color: rgba(122, 26, 31, 0.85); }
+    .divider { display: flex; gap: 10px; margin: 20px 0; justify-content: center; }
+    .divider i { width: 9px; height: 9px; border-radius: 50%; background: rgba(226, 92, 92, 0.55); }
+    .when { font-family: 'Caveat', cursive; font-size: 37px; color: #c1272d; white-space: nowrap; }
+    .where { font-size: 19px; font-weight: 600; color: rgba(122, 26, 31, 0.8); margin-top: 6px; white-space: nowrap; }
     .heart {
       position: absolute;
       fill: #e25c5c;
@@ -91,13 +116,21 @@
     <svg class="heart" style="width:34px;left:150px;bottom:80px;transform:rotate(8deg)" viewBox="0 0 32 30"><path d="M16 27S3 18.5 3 10.5C3 6 6.5 3 10 3c2.5 0 4.5 1.5 6 4 1.5-2.5 3.5-4 6-4 3.5 0 7 3 7 7.5C29 18.5 16 27 16 27z"/></svg>
     <svg class="heart" style="width:64px;right:70px;bottom:60px;transform:rotate(-9deg)" viewBox="0 0 32 30"><path d="M16 27S3 18.5 3 10.5C3 6 6.5 3 10 3c2.5 0 4.5 1.5 6 4 1.5-2.5 3.5-4 6-4 3.5 0 7 3 7 7.5C29 18.5 16 27 16 27z"/></svg>
 
-    <div class="eyebrow">✶ You're invited ✶</div>
-    <div class="eyebrow-ar">ندعوكم لحفل خطوبتنا</div>
-    <div class="names">Youssef <span class="amp">&amp;</span> Ganna</div>
-    <div class="names-ar">يوسف و جنة</div>
-    <div class="divider"><i></i><i></i><i></i><i></i><i></i></div>
-    <div class="when">Thursday, September 24, 2026 · 7:00 PM</div>
-    <div class="where">Loreal Hall - Al Galaa Club · قاعة لوريال - نادي الجلاء</div>
+    <div class="polaroid">
+      <div class="ptape"></div>
+      <img src="../assets/Hero.jpeg" alt="" />
+      <div class="cap">Since day one ♥</div>
+    </div>
+
+    <div class="stack">
+      <div class="eyebrow">✶ You're invited ✶</div>
+      <div class="eyebrow-ar">ندعوكم لحفل خطوبتنا</div>
+      <div class="names">Youssef <span class="amp">&amp;</span> Ganna</div>
+      <div class="names-ar">يوسف و جنة</div>
+      <div class="divider"><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="when">Thursday, September 24, 2026 · 7:00 PM</div>
+      <div class="where">Loreal Hall - Al Galaa Club · قاعة لوريال - نادي الجلاء</div>
+    </div>
   </div>
 </body>
 

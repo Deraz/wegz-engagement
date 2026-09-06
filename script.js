@@ -11,7 +11,7 @@ const INVITE = {
   venue: "Loreal Hall - Al Galaa Club",
   venueAr: "قاعة لوريال - نادي الجلاء",
   address: "",                    // optional area/city, e.g. "New Cairo" (hidden when empty)
-  mapsUrl: "https://maps.app.goo.gl/s44aGuM3sf1ryt758",
+  mapsUrl: "https://maps.app.goo.gl/dfo5dGdNXzPvPEBF6?g_st=ic", // gate location
 
   // V2: Google Apps Script web-app URL (ends in /exec) that appends wishes
   // to a Google Sheet — see apps-script/Code.gs for the 3-minute setup.
